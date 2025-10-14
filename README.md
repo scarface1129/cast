@@ -37,6 +37,26 @@ It uses **AI-driven insights** to detect historical trends and predict potential
 
 ### 1. Clone the Repository
 ```bash
+git clone https://github.com/scarface1129/cast.git
+cd cast
 
 
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
 
+Update .env with:
+
+# For OAuth
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_REDIRECT_URI=${APP_URL}/auth/google/callback
+
+TWITTER_CLIENT_ID=
+TWITTER_CLIENT_SECRET=
+TWITTER_REDIRECT_URI=${APP_URL}/auth/twitter/callback
+
+php artisan migrate
+npm run dev
+php artisan serve
