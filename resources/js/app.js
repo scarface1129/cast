@@ -1,7 +1,5 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
-import Layout from './Shared/Layout.vue'
-import Pagination from './Shared/pagination.vue'
 
 createInertiaApp({
   resolve: name => {
